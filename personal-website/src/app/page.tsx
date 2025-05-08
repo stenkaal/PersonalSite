@@ -29,7 +29,7 @@ export default function Home() {
           Github
         </a>
         <a
-          href="discordapp.com/users/409400613441634305"
+          href="https://discordapp.com/users/409400613441634305"
           className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         >
           Discord
