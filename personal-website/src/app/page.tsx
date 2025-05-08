@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -22,7 +21,26 @@ export default function Home() {
           priority
         />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <a
+          href="https://github.com/stenkaal"
+          className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+        >
+          Github
+        </a>
+        <a
+          href="discordapp.com/users/409400613441634305"
+          className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+        >
+          Discord
+        </a>
+        <a
+          href="mailto:mail@stenkaal.com"
+          className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+        >
+          Mail
+        </a>
+      </footer>
     </div>
   );
 }
