@@ -17,7 +17,7 @@ export default function Home() {
         {/*NAVBAR*/}
 
         {/*HEADER */}
-            <div className="absolute w-full md:right-0 md:top-0 md:bottom-0 md:w-2/3 z-0 overflow-hidden">
+            <div className="absolute w-full right-0 top-0 bottom-0 lg:w-2/3 z-0 overflow-hidden">
               <Image
                 src="/20250414_101519.jpg"
                 alt="En bild på mig"
@@ -124,11 +124,11 @@ export default function Home() {
       PROJECTS SECTION END*/}
 
       {/*CONTACT SECTION*/}
-      <footer id="contact" className="p-8 w-1/3 shadow-[0_0_15px] rounded-2xl ring-5 shadow-amber-50 m-20 mx-auto row-start-4">
+      <footer id="contact" className="p-8 lg:w-3/4 2xl:w-1/3 shadow-[0_0_15px] rounded-2xl ring-5 shadow-amber-50 m-20 mx-auto row-start-4">
         <h2 className="font-bold font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8">
           Get In Touch
         </h2>
-        <div className=" gap-10 text-base justify-around grid grid-cols-4 font-bold font-sans text-md sm:text-lg md:text-xl lg:text-2xl text-center">
+        <div className=" gap-10 text-base justify-around grid grid-cols-1 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 font-bold font-sans text-md sm:text-lg md:text-xl lg:text-2xl text-center">
           {" "}
           <a href="" className=" p-2 rounded-xl shadow-lg shadow-blue-500 bg-blue-600 border-blue-500 border-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             CV
