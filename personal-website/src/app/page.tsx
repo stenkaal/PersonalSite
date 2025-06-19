@@ -17,7 +17,7 @@ export default function Home() {
         {/*NAVBAR*/}
 
         {/*HEADER */}
-            <div className="absolute w-full right-0 top-0 bottom-0 lg:w-2/3 z-0 overflow-hidden">
+            <div className="absolute md:w-full right-0 top-0 bottom-0 lg:w-2/3 z-0 overflow-hidden">
               <Image
                 src="/20250414_101519.jpg"
                 alt="En bild på mig"
@@ -124,7 +124,7 @@ export default function Home() {
       PROJECTS SECTION END*/}
 
       {/*CONTACT SECTION*/}
-      <footer id="contact" className="p-8 lg:w-3/4 2xl:w-1/3 shadow-[0_0_15px] rounded-2xl ring-5 shadow-amber-50 m-20 mx-auto row-start-4">
+      <footer id="contact" className="p-8 lg:w-3/4 2xl:w-1/3 shadow-[0_0_15px] rounded-2xl ring-5 shadow-amber-50 m-20 mx-auto row-start-3">
         <h2 className="font-bold font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8">
           Get In Touch
         </h2>
