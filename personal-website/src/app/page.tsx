@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[1fr_auto_auto] items-center justify-items-center min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
       {/*HEADER/HERO */}
-      <header className="relative w-full row-start-1 max-h-screen overflow-hidden flex items-center justify-center">
+      <header className="relative w-full row-start-1 min-h-screen overflow-hidden flex items-center justify-center">
         <div className="absolute md:w-full right-0 top-0 bottom-0 lg:w-2/3 z-0 overflow-hidden">
           <Image
             src="/20250414_101519.jpg"
