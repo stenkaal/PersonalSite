@@ -26,7 +26,7 @@ export default function Menu() {
 
   useGSAP(
     () => {
-      gsap.set(".menu-link-item-holder", { y: 75 });
+      gsap.set(".menu-link-item-holder", { x: -500 });
 
       tl.current = gsap
         .timeline({
@@ -38,7 +38,7 @@ export default function Menu() {
           ease: "power4.inOut",
         })
         .to(".menu-link-item-holder", {
-          y: 0,
+          x: 0,
           stagger: 0.1,
           ease: "power4.inOut",
           delay: -0.75,
@@ -83,7 +83,7 @@ export default function Menu() {
           <div className="menu-links">
             {menuItems.map((item, index) => (
               <div className="menu-link-item" key={index}>
-                <div className="text-[80px] font-[400] tracking-[-0.02em] leading-[85%] text-black">
+                <div className="text-[80px] font-[400] tracking-[-0.02em] leading-[85%] text-black menu-link-item-holder">
                   <Link
                     href={item.href}
                     className="menu-link"
