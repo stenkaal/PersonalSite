@@ -26,7 +26,7 @@ export default function Menu() {
 
   useGSAP(
     () => {
-      gsap.set(".menu-link-item-holder", { y: 75 });
+      gsap.set(".menu-link-item", { x: -500 });
 
       tl.current = gsap
         .timeline({
@@ -34,11 +34,11 @@ export default function Menu() {
         })
         .to(".menu-overlay", {
           duration: 1.5,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
           ease: "power4.inOut",
         })
-        .to(".menu-link-item-holder", {
-          y: 0,
+        .to(".menu-link-item", {
+          x: 0,
           stagger: 0.1,
           ease: "power4.inOut",
           delay: -0.75,
@@ -65,7 +65,7 @@ export default function Menu() {
         <div className="menu-logo">
           <Link href="/">Sten Kaal</Link>
         </div>
-        <div className="menu-open" onClick={toggleMenu}>
+        <div className="menu-open cursor-pointer" onClick={toggleMenu}>
           <p>Menu</p>
         </div>
       </div>
@@ -74,13 +74,13 @@ export default function Menu() {
           <Link href="/">Sten Kaal</Link>
         </div>
         <div
-          className="font-light text-[75px] col-start-2 flex justify-end"
+          className="font-light text-[75px] col-start-2 flex justify-end cursor-pointer"
           onClick={toggleMenu}
         >
           <p>&#x2715;</p>
         </div>
         <div className="col-span-2 menu-copy">
-          <div className="menu-links">
+          <div className="menu-link-item-holder">
             {menuItems.map((item, index) => (
               <div className="menu-link-item" key={index}>
                 <div className="text-[80px] font-[400] tracking-[-0.02em] leading-[85%] text-black">

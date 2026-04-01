@@ -24,7 +24,7 @@ export default function Home() {
           />
         </div>
         <div className="absolute inset-0 z-1 flex flex-col items-start justify-center px-8 text-white max-w-[1100px] top-1/2">
-          <h1 className="font-sans font-black text-5xl/15 sm:text-6xl/20 md:text-7xl/20 lg:text-8xl/25 gap-4">
+          <h1 className="font-sans font-black text-5xl/15 sm:text-6xl/20 md:text-7xl/20 lg:text-8xl/25 gap-4 cursor-default">
             Finding <b className="bg-white px-3 text-black">solutions</b> for{" "}
             <u>tomorrows</u> problems.
           </h1>
