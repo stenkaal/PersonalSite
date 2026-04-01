@@ -45,7 +45,7 @@ export default function Menu() {
           duration: 1,
         });
     },
-    { scope: container }
+    { scope: container },
   );
 
   useEffect(() => {
