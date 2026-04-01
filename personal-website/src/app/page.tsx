@@ -9,7 +9,7 @@ export default function Home() {
         <div className="absolute md:w-full right-0 top-0 bottom-0 lg:w-2/3 z-0 overflow-hidden">
           <Image
             src="/20250414_101519.jpg"
-            alt="En bild på mig"
+            alt="Picture of me"
             layout="fill"
             objectFit="cover"
             priority
@@ -19,7 +19,7 @@ export default function Home() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "radial-gradient(circle at center, transparent 0%, rgba(10, 10, 10, 1) 85%)",
+                "radial-gradient(circle at center, transparent 0%, rgba(3, 12, 20, 1) 85%)",
               pointerEvents: "none",
             }}
           />
