@@ -69,7 +69,7 @@ export default function Menu() {
           <p>Menu</p>
         </div>
       </div>
-      <div className="menu-overlay fixed top-0 left-0 w-full md:w-auto h-full z-2 grid grid-rows-3 gap-4 bg-purple-600 p-2 pr-10">
+      <div className="menu-overlay fixed top-0 left-0 w-full md:w-auto h-full z-2 grid grid-rows-3 gap-4 bg-accent p-2 pr-10">
         <div className="menu-logo col-start-1">
           <Link href="/">Sten Kaal</Link>
         </div>

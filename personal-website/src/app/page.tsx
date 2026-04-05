@@ -1,18 +1,77 @@
 "use client";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// ScrollSmoother requires ScrollTrigger
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(
+  useGSAP,
+  ScrambleTextPlugin,
+  ScrollTrigger,
+  ScrollSmoother,
+  SplitText,
+);
 
 export default function Home() {
+  const textRef = useRef(null);
+
+  // List the fonts you've imported in your project
+  const fonts = [
+    geistSans.style.fontFamily,
+    geistMono.style.fontFamily,
+    mono.style.fontFamily,
+    playwrite.style.fontFamily,
+    brico.style.fontFamily,
+    space.style.fontFamily,
+    inter.style.fontFamily,
+  ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ repeat: -1 });
+
+      fonts.forEach((font) => {
+        tl.to(textRef.current, {
+          fontFamily: `"${font}"`,
+          duration: 0, // Instant switch
+          delay: 2, // Wait 2 seconds before the next switch
+        });
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="grid grid-rows-[1fr_auto_auto] items-center justify-items-center min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
       {/*HEADER/HERO */}
-      <header className="relative w-full row-start-1 min-h-screen overflow-hidden flex items-center justify-center">
-        <p>
-          Hey, I&apos;m
+      <header className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
+        <p className="text-2xl/15 sm:3xl/20 lg:text-4xl/20 pr-5">
+          <b>Hey, I&apos;m</b>
           <br />
         </p>
-        <h1 className="text-5xl/15 sm:text-6xl/20 md:text-7xl/20 lg:text-8xl/25">
+        <h1
+          ref={textRef}
+          className="text-5xl/15 sm:text-6xl/20 md:text-7xl/20 lg:text-8xl/25"
+        >
           Sten Kaal
+          <br />
         </h1>
+        <p className="text-2xl/15 sm:3xl/20 lg:text-4xl/20 pl-5">
+          <b>
+            and I&apos;m a{" "}
+            <i className="text-3xl/15 sm:4xl/20 lg:text-5xl/20 underline">
+              Software Designer
+            </i>
+          </b>
+          <br />
+        </p>
       </header>
       {/*HEADER/HERO END*/}
 
@@ -30,7 +89,7 @@ export default function Home() {
               Who?
             </h3>
             <p className="text-base font-mono text-md sm:text-lg md:text-xl lg:text-2xl ">
-              Hi! My name&apos;s Sten. I&apos;m 20-years old and have a
+              Hi! My name&apos;s Sten. I&apos;m 21-years old and have a
               deep-passion for programming and problem solving at large, but
               what interests me the most is cybersecurity!
             </p>
